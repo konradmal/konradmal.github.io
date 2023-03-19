@@ -1,48 +1,81 @@
-.container {
-    text-align: center;
-    margin-top: 20px;
+body {
+    background-color: #00AA00;
 }
 
-h1 {
-    font-size: 36px;
-    font-weight: bold;
-}
-
-.game-container {
-    margin-top: 20px;
-}
-
-.game-board {
+.puzzle1 {
+    height: 80%;
     display: flex;
-    flex-wrap: wrap;
-    width: 300px;
-    height: 300px;
+    justify-content: center;
+}
+
+.puzzle-ps {
+    width: 120px;
+    height: 120px;
+    float: left;
+}
+
+.puzzle-c {
+    width: 790px;
+    height: 275px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0); 
+    float: left;
+}
+
+.puzzle-im {
+    background-image: url("ivi.jpg");
+}
+
+.puzzle-bs {
     border: 2px solid black;
-    margin: 0 auto;
+    background-color: #EEEEEE;
 }
 
-.game-board div {
-    width: 100px;
-    height: 100px;
-    border: 1px solid black;
-    font-size: 72px;
-    text-align: center;
-    line-height: 100px;
-    cursor: pointer;
+#img-ivi1 {
+    background-position: 0 0;
 }
 
-.game-board div:hover {
-    background-color: #eee;
+#img-ivi2 {
+    background-position: -125px 0;
 }
 
-.game-status {
-    font-size: 24px;
-    margin-top: 20px;
+#img-ivi3 {
+    background-position: -250px 0;
 }
 
-.restart-btn {
-    font-size: 18px;
-    padding: 10px 20px;
-    margin-top: 20px;
-    cursor: pointer;
+#img-ivi4 {
+    background-position: -375px 0;
+}
+
+#img-ivi5 {
+    background-position: 0 -125px;
+}
+
+#img-ivi6 {
+    background-position: -125px -125px;
+}
+
+#img-ivi7 {
+    background-position: -250px -125px;
+}
+
+#img-ivi8 {
+    background-position: -375px -125px;
+}
+
+#img-ivi9 {
+    background-position: 0 -250px;
+}
+
+#img-ivi10 {
+    background-position: -125px -250px;
+}
+
+#img-ivi11 {
+    background-position: -250px -250px;
+}
+
+#img-ivi12 {
+    background-position: -375px -250px;
 }
