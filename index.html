@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Ivi Lopez</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="puzzle1">
+        <div>
+            <div>
+                <div class="puzzle-bs puzzle-ps"></div>
+                <div class="puzzle-bs puzzle-ps"></div>
+                <div class="puzzle-bs puzzle-ps"></div>
+                <div class="puzzle-bs puzzle-ps"></div>
+            </div>
+    
+            <div>
+                <div class="puzzle-bs puzzle-ps"></div>
+                <div class="puzzle-bs puzzle-ps"></div>
+                <div class="puzzle-bs puzzle-ps"></div>
+                <div class="puzzle-bs puzzle-ps"></div>
+            </div>
+    
+            <div>
+                <div class="puzzle-bs puzzle-ps"></div>
+                <div class="puzzle-bs puzzle-ps"></div>
+                <div class="puzzle-bs puzzle-ps"></div>
+                <div class="puzzle-bs puzzle-ps"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="puzzle-c">
+        <div class="puzzle-ps puzzle-im" id="img-ivi1" draggable="true"></div>
+        <div class="puzzle-ps puzzle-im" id="img-ivi2" draggable="true"></div>
+        <div class="puzzle-ps puzzle-im" id="img-ivi3" draggable="true"></div>
+        <div class="puzzle-ps puzzle-im" id="img-ivi4" draggable="true"></div>
+        <div class="puzzle-ps puzzle-im" id="img-ivi5" draggable="true"></div>
+        <div class="puzzle-ps puzzle-im" id="img-ivi6" draggable="true"></div>
+        <div class="puzzle-ps puzzle-im" id="img-ivi7" draggable="true"></div>
+        <div class="puzzle-ps puzzle-im" id="img-ivi8" draggable="true"></div>
+        <div class="puzzle-ps puzzle-im" id="img-ivi9" draggable="true"></div>
+        <div class="puzzle-ps puzzle-im" id="img-ivi10" draggable="true"></div>
+        <div class="puzzle-ps puzzle-im" id="img-ivi11" draggable="true"></div>
+        <div class="puzzle-ps puzzle-im" id="img-ivi12" draggable="true"></div>  
+    </div>
+
+<script>
+window.onload =  shufflePuzzleims
+
+function dragStart(e) {
+    puzzleDr = e.target
+    puzzleDr.classList.remove('placed')
+}
+
+function dragOver(e) {
+    e.preventDefault()
+}
+
+let puzzleimsPlaced = document.querySelectorAll('.placed')
+function dragDrop(e) {
+    if (e.target.classList.contains('puzzle-bs') ||
+        e.target.classList.contains('puzzle-c')) {
+        e.target.append(puzzleDr)
+    }
+    
+    puzzleDr.classList.add('placed')
+    puzzleimsPlaced = document.querySelectorAll('.placed')
+}
+
+let puzzleims = document.querySelectorAll('.puzzle-im')
+puzzleims.forEach(im => {
+    im.addEventListener('dragstart', dragStart)
+});
+
+let boardSquares = document.querySelectorAll('.puzzle-bs')
+boardSquares.forEach(square => {
+    square.addEventListener('drop', dragDrop)
+    square.addEventListener('dragover', dragOver)
+});
+
+const puzzlePicker = document.querySelector('.puzzle-c')
+puzzlePicker.addEventListener('drop', dragDrop)
+puzzlePicker.addEventListener('dragover', dragOver)
+
+function shufflePuzzleims() {
+    for (let i=0; i < puzzlePicker.children.length; i++) {
+        puzzlePicker.appendChild(puzzlePicker.children[Math.random() * i | 0]);
+  }
+}
+</script>
+</body>
+</html>
