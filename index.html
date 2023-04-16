@@ -1,95 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Puzzle Ivi Lopez</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Strona Konrada</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="puzzle1">
-        <div>
-            <div>
-                <div class="puzzle-bs puzzle-ps"></div>
-                <div class="puzzle-bs puzzle-ps"></div>
-                <div class="puzzle-bs puzzle-ps"></div>
-                <div class="puzzle-bs puzzle-ps"></div>
+<body style="background-color:powderblue;">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Strona główna</a></li>
+                <li><a href="#">O mnie</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Konrad Maleńczak</h1>
+            <p>
+Wygraj nasz Rakowie ważny mecz<br>
+My wspieramy głośno Cię<br>
+Cała czerwono-niebieska brać<br>
+Wciąż przy Tobie będzie trwać<br>
+<br>
+W Świętym Mieście tylko Święty Klub<br>
+Będę kochać Go po grób<br>
+Fanatyczny doping niesie się<br>
+Medaliki bawią się<br>
+            </p>
+            <div class="images">
+                <img src="ivi.jpg" alt="Placeholder obrazka">
+                <img src="zoran.jpg" alt="Placeholder obrazka">
+                <img src="fran.jpg" alt="Placeholder obrazka">
             </div>
-    
-            <div>
-                <div class="puzzle-bs puzzle-ps"></div>
-                <div class="puzzle-bs puzzle-ps"></div>
-                <div class="puzzle-bs puzzle-ps"></div>
-                <div class="puzzle-bs puzzle-ps"></div>
+            <div class="links">
+                <a href="https://www.youtube.com/@Rakow1921"><img src="yt_logo.png" alt="YouTube logo"></a>
+                <a href="https://www.youtube.com/@Rakow1921">Kanał YouTube Raków Częstochowa</a>
             </div>
-    
-            <div>
-                <div class="puzzle-bs puzzle-ps"></div>
-                <div class="puzzle-bs puzzle-ps"></div>
-                <div class="puzzle-bs puzzle-ps"></div>
-                <div class="puzzle-bs puzzle-ps"></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="puzzle-c">
-        <div class="puzzle-ps puzzle-im" id="img-ivi1" draggable="true"></div>
-        <div class="puzzle-ps puzzle-im" id="img-ivi2" draggable="true"></div>
-        <div class="puzzle-ps puzzle-im" id="img-ivi3" draggable="true"></div>
-        <div class="puzzle-ps puzzle-im" id="img-ivi4" draggable="true"></div>
-        <div class="puzzle-ps puzzle-im" id="img-ivi5" draggable="true"></div>
-        <div class="puzzle-ps puzzle-im" id="img-ivi6" draggable="true"></div>
-        <div class="puzzle-ps puzzle-im" id="img-ivi7" draggable="true"></div>
-        <div class="puzzle-ps puzzle-im" id="img-ivi8" draggable="true"></div>
-        <div class="puzzle-ps puzzle-im" id="img-ivi9" draggable="true"></div>
-        <div class="puzzle-ps puzzle-im" id="img-ivi10" draggable="true"></div>
-        <div class="puzzle-ps puzzle-im" id="img-ivi11" draggable="true"></div>
-        <div class="puzzle-ps puzzle-im" id="img-ivi12" draggable="true"></div>  
-    </div>
-
-<script>
-window.onload =  shufflePuzzleims
-
-function dragStart(e) {
-    puzzleDr = e.target
-    puzzleDr.classList.remove('placed')
-}
-
-function dragOver(e) {
-    e.preventDefault()
-}
-
-let puzzleimsPlaced = document.querySelectorAll('.placed')
-function dragDrop(e) {
-    if (e.target.classList.contains('puzzle-bs') ||
-        e.target.classList.contains('puzzle-c')) {
-        e.target.append(puzzleDr)
-    }
-    
-    puzzleDr.classList.add('placed')
-    puzzleimsPlaced = document.querySelectorAll('.placed')
-}
-
-let puzzleims = document.querySelectorAll('.puzzle-im')
-puzzleims.forEach(im => {
-    im.addEventListener('dragstart', dragStart)
-});
-
-let boardSquares = document.querySelectorAll('.puzzle-bs')
-boardSquares.forEach(square => {
-    square.addEventListener('drop', dragDrop)
-    square.addEventListener('dragover', dragOver)
-});
-
-const puzzlePicker = document.querySelector('.puzzle-c')
-puzzlePicker.addEventListener('drop', dragDrop)
-puzzlePicker.addEventListener('dragover', dragOver)
-
-function shufflePuzzleims() {
-    for (let i=0; i < puzzlePicker.children.length; i++) {
-        puzzlePicker.appendChild(puzzlePicker.children[Math.random() * i | 0]);
-  }
-}
-</script>
+            <br>
+            <table>
+                <caption>Tabela Ekstraklasy</caption>
+                <thead>
+                    <tr>
+                        <th>Pozycja</th>
+                        <th>Zespół</th>
+                        <th>Mecze</th>
+                        <th>Punkty</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Raków Częstochowa</td>
+                        <td>27</td>
+                        <td>62</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Legia Warszawa</td>
+                        <td>27</td>
+                        <td>56</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Lech Poznań</td>
+                        <td>27</td>
+                        <td>47</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Pogoń Szczecin</td>
+                        <td>28</td>
+                        <td>47</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Warta Poznań</td>
+                        <td>28</td>
+                        <td>41</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>Strona Konrada</p>
+    </footer>
 </body>
 </html>
