@@ -183,7 +183,7 @@
 
   @media (min-width: 1024px) {
     .container {
-      width: 90%;
+      width: 100%;
       margin: 0 auto;
       padding: 20px;
     }
@@ -191,8 +191,8 @@
 
   @media (min-width: 640px) and (max-width: 1023px) {
     .container {
-      max-width: 960px;
-      width: 90%;
+      max-width: 1023px;
+      width: 100%;
       margin: 0 auto;
       padding: 15px;
     }
@@ -200,8 +200,8 @@
 
   @media (max-width: 639px) {
     .container {
-      max-width: 600px;
-      width: 90%;
+      max-width: 639px;
+      width: 100%;
       margin: 0 auto;
       padding: 10px;
     }
