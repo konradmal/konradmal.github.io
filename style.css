@@ -185,7 +185,6 @@
     .container {
       width: 100%;
       margin: 0 auto;
-      padding: 20px;
     }
   }
 
@@ -194,7 +193,6 @@
       max-width: 1023px;
       width: 100%;
       margin: 0 auto;
-      padding: 15px;
     }
   }
 
@@ -203,6 +201,5 @@
       max-width: 639px;
       width: 100%;
       margin: 0 auto;
-      padding: 10px;
     }
   }
