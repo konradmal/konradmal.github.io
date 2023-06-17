@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strona Raków Częstochowa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="cookie-info" style="display: none;">
+    Ta strona wykorzystuje pliki cookies, aby zapewnić lepszą jakość korzystania z serwisu. 
+    Kontynuując przeglądanie strony, zgadzasz się na używanie plików cookies.
+    <button id="cookie-accept">Zgoda</button>
+  </div>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="./index.html"><h4>Polski</h4></a></li>
+        <li><a href="./indexen.html"><h4>Angielski</h4></a></li>
+        <li><a href="#home"><h4 id="home1">Strona główna</h4></a></li>
+        <li><a href="#about"><h4>O nas</h4></a></li>
+        <li><a href="#services"><h4>Piłkarze</h4></a></li>
+        <li><a href="#table"><h4>Tabela</h4></a></li>
+        <li><a href="#contact"><h4>Kontakt</h4></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <div class="container">
+        <h1><a href="#home1">Witaj na stronie Rakowa Częstochowa!</a></h1>
+        <p>RKS Raków Częstochowa – klub sportowy z Częstochowy założony w 1921 pod nazwą Racovia. 
+          Jego nazwa pochodzi od dzielnicy Raków, gdzie znajduje się siedziba klubu. 
+          Od sezonu 2019/20 męska drużyna piłkarska występuje w Ekstraklasie. 
+          Mistrz Polski w 2023 roku, dwukrotny wicemistrz Polski, oraz zdobywca Pucharu Polski i Superpucharu Polski w latach 2021 i 2022.
+          <span class="dots">...</span><span class="more">
+          W sezonie 2022/2023 Raków trzeci raz z rzędu zagrał w finale Pucharu Polski, w którym po bezbramkowym remisie przegrał z Legią Warszawa 5:6 w serii rzutów karnych. 
+          7 maja 2023 roku Pogoń Szczecin wygrała na swoim boisku 2:1 z Legią Warszawa. 
+          Ten wynik sprawił, że na trzy kolejki przed końcem sezonu Raków zapewnił sobie pierwsze w historii mistrzostwo Polski. 
+          Podczas Gali Ekstraklasy podsumowującej sezon 2022/2023 Vladan Kovačević został po raz drugi z rzędu wybrany bramkarzem sezonu, 
+          Fran Tudor otrzymał tytuł obrońcy sezonu, a Marek Papszun został wybrany trenerem sezonu. </span></p>
+        <button onclick="readMore1()" id="read-more1" class="button">Rozwiń/Zwiń</button>
+      </div>
+      <a href="https://rakow.com/" target="_blank">
+        <img src="RKS.png" alt="logo" style="max-width:100%;height:auto;">
+      </a>
+    </section>
+    <section id="about">
+      <div class="container">
+        <h2><a href="#home1">O nas</a></h2>
+        <table class="club-info">
+          <tr>
+            <th>Właściciel</th>
+            <td>Michał Świerczewski</td>
+          </tr>
+          <tr>
+            <th>Prezes</th>
+            <td>Piotr Obidziński</td>
+          </tr>
+          <tr>
+            <th>Przewodniczący Rady Nazdorczej</th>
+            <td>Wojciech Cygan</td>
+          </tr>
+          <tr>
+            <th>Trener pierwszego zespołu</th>
+            <td>Marek Papszun</td>
+          </tr>
+          <tr>
+            <th>Asystent trenera</th>
+            <td>Mariusz Kondak, Łukasz Włodarek, Dawid Szwarga, Kacper Jędrychowski</td>
+          </tr>
+          <tr>
+            <th>Analityk</th>
+            <td>Maciej Krzymień</td>
+          </tr>
+          <tr>
+            <th>Trener bramkarzy</th>
+            <td>Maciej Kowal</td>
+          </tr>
+          <tr>
+            <th>Kierownik drużyny</th>
+            <td>Kamil Waskowski</td>
+          </tr>
+          <tr>
+            <th>Asystent kierownika</th>
+            <td>Oskar Koślik</td>
+          </tr>
+          <tr>
+            <th>Kitman</th>
+            <td>Patryk Węgrzyński</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <section id="services">
+      <div class="container">
+        <h2><a href="#home1">Piłkarze</a></h2>
+        <ul id="players-list"></ul>
+        <form id="add-player-form">
+          <input type="text" id="player-input" placeholder="Dodaj nowego piłkarza" required>
+          <button type="submit">Dodaj</button>
+        </form>
+      </div>
+    </section>
+    <section id="table">
+      <div class="container">
+        <h2><a href="#home1">Tabela</a></h2>
+        <table class="club-info">
+          <tr>
+            <th>Lp.</th>
+            <th>Drużyna</th>
+            <th>M.</th>
+            <th>Pkt.</th>
+            <th>Z.</th>
+            <th>R.</th>
+            <th>P.</th>
+            <th>Bramki</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Raków Częstochowa</td>
+            <td>34</td>
+            <td>75</td>
+            <td>23</td>
+            <td>6</td>
+            <td>5</td>
+            <td>63-24</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Legia Warszawa</td>
+            <td>34</td>
+            <td>66</td>
+            <td>19</td>
+            <td>9</td>
+            <td>6</td>
+            <td>57-37</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Lech Poznań</td>
+            <td>34</td>
+            <td>61</td>
+            <td>17</td>
+            <td>10</td>
+            <td>7</td>
+            <td>51-29</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Pogoń Szczecin</td>
+            <td>34</td>
+            <td>60</td>
+            <td>17</td>
+            <td>9</td>
+            <td>8</td>
+            <td>57-46</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Piast Gliwice</td>
+            <td>34</td>
+            <td>53</td>
+            <td>15</td>
+            <td>8</td>
+            <td>11</td>
+            <td>40-31</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Górnik Zabrze</td>
+            <td>34</td>
+            <td>48</td>
+            <td>13</td>
+            <td>9</td>
+            <td>12</td>
+            <td>45-43</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Cracovia</td>
+            <td>34</td>
+            <td>46</td>
+            <td>12</td>
+            <td>10</td>
+            <td>12</td>
+            <td>41-35</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Zagłębie Lubin</td>
+            <td>34</td>
+            <td>45</td>
+            <td>12</td>
+            <td>9</td>
+            <td>13</td>
+            <td>35-44</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>Warta Poznań</td>
+            <td>34</td>
+            <td>45</td>
+            <td>12</td>
+            <td>9</td>
+            <td>13</td>
+            <td>37-35</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>Radomiak Radom</td>
+            <td>34</td>
+            <td>44</td>
+            <td>12</td>
+            <td>8</td>
+            <td>14</td>
+            <td>34-41</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>Stal Mielec</td>
+            <td>34</td>
+            <td>43</td>
+            <td>11</td>
+            <td>10</td>
+            <td>13</td>
+            <td>36-40</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>Widzew Łódź</td>
+            <td>34</td>
+            <td>41</td>
+            <td>11</td>
+            <td>8</td>
+            <td>15</td>
+            <td>38-47</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>Korona Kielce</td>
+            <td>34</td>
+            <td>41</td>
+            <td>11</td>
+            <td>8</td>
+            <td>15</td>
+            <td>39-48</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>Jagiellonia Białystok</td>
+            <td>34</td>
+            <td>41</td>
+            <td>9</td>
+            <td>14</td>
+            <td>11</td>
+            <td>48-49</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>Śląsk Wrocław</td>
+            <td>34</td>
+            <td>38</td>
+            <td>9</td>
+            <td>11</td>
+            <td>14</td>
+            <td>35-48</td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td>Wisła Płock</td>
+            <td>34</td>
+            <td>37</td>
+            <td>10</td>
+            <td>7</td>
+            <td>17</td>
+            <td>41-50</td>
+          </tr>
+          <tr>
+            <td>17</td>
+            <td>Lechia Gdańsk</td>
+            <td>34</td>
+            <td>30</td>
+            <td>8</td>
+            <td>6</td>
+            <td>20</td>
+            <td>28-56</td>
+          </tr>
+          <tr>
+            <td>18</td>
+            <td>Miedź Legnica</td>
+            <td>34</td>
+            <td>23</td>
+            <td>4</td>
+            <td>11</td>
+            <td>19</td>
+            <td>33-55</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="container">
+        <h2><a href="#home1">Kontakt</a></h2>
+        <p><strong>Adres:</strong> Ulica Bolesława Limanowskiego 83, 42-208 Częstochowa</p>
+        <p><strong>Stadion:</strong> Miejski Stadion Piłkarski Raków w Częstochowie</p>
+        <p><strong>Email:</strong> fundacja@rakow.com</p>
+      </div>
+    </section>
+    
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Strona Raków Częstochowa. Wszelkie prawa zastrzeżone.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
