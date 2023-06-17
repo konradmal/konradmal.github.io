@@ -152,18 +152,19 @@
   
   .club-info th,
   .club-info td {
-    padding: 10px;
+    padding: 5px;
     border: 1px solid #ddd;
   }
   
   .club-info th {
     background-color: #f3f3f3;
     font-weight: bold;
-    text-align: left;
+    text-align: center;
   }
   
   .club-info td {
     text-align: center;
+    font-size: small;
   }
   
   #cookie-info {
