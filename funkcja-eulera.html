@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funkcja Eulera</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Funkcja Eulera</h1>
+    </header>
+
+    <nav class="left-menu">
+        <ul>
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="#top">Teoria</a></li>
+            <li><a href="./funkcja-eulera/funkcja-eulera-zad-pod.html">Zadania podstawowe</a></li>
+            <li><a href="./funkcja-eulera/funkcja-eulera-zad-zaa.html">Zadania zaawansowane</a></li>
+        </ul>
+    </nav>
+
+    <div class="middle-menu">
+        <p>
+            <strong>Teoria</strong>
+        </p>
+        <p>Funkcja Eulera, oznaczana jako <var>φ(n)</var>, odgrywa istotną rolę w teorii liczb, jest powiązana z Rozszerzonym Algorytmem Euklidesa (RAE) oraz ma zastosowanie w kryptografii. Funkcja Eulera <var>φ(n)</var> przyjmuje jako argument liczbę całkowitą <var>n</var> i zwraca liczbę całkowitą reprezentującą ilość liczb całkowitych z przedziału od <var>1</var> do <var>n</var> (włącznie), które są względnie pierwsze z <var>n</var>. Innymi słowy, <var>φ(n)</var> to liczba liczb całkowitych w przedziale <var>[1, n]</var>, które nie mają wspólnego dzielnika większego niż <var>1</var> z <var>n</var>. Funkcja Eulera jest kluczowym narzędziem w kryptografii, gdzie jest używana do obliczania kluczy prywatnych i publicznych w algorytmach takich jak RSA.</p>
+        <p>
+            <strong>Obliczanie Funkcji Eulera</strong>
+        </p>
+        <p>Funkcja Eulera <var>φ(n)</var> jest obliczana na podstawie rozkładu na czynniki pierwsze liczby <var>n</var>. Jeśli <var>n = p<sub>1</sub><sup>a<sub>1</sub></sup> * p2<sup>a<sub>2</sub></sup> * ... * p<sub>k</sub><sup>a<sub>k</sub></sup></var>, gdzie <var>p<sub>1</sub>, p<sub>2</sub>, ..., p<sub>k</sub></var> są różnymi liczbami pierwszymi, a <var>a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>k</sub></var> to ich odpowiednie wykładniki, to <var>φ(n)</var> można obliczyć za pomocą wzoru:</p>
+        <p>
+            <code>φ(n) = n * (1 - 1/p<sub>1</sub>) * (1 - 1/p<sub>2</sub>) * ... * (1 - 1/p<sub>k</sub>)</code>
+        </p>
+        <p>Innymi słowy, <var>φ(n)</var> jest iloczynem liczby <var>n</var> i iloczynu <var>(1 - 1/p)</var> dla wszystkich różnych liczb pierwszych <var>p</var>, które dzielą <var>n</var>.</p>
+        <p>
+            <strong>Przykład</strong>
+        </p>
+        <p>Jeśli <var>n = 12</var>, to rozkład na czynniki pierwsze to <var>2<sup>2</sup> * 3<sup>1</sup></var>. Możemy obliczyć <var>φ(12)</var> za pomocą wzoru:</p>
+<pre>
+    <code>φ(12) = 12 * (1 - 1/2) * (1 - 1/3) = 12 * (1/2) * (2/3) = 4</code>
+</pre>
+        <p>Zatem <var>φ(12) = 4</var>, co oznacza, że istnieją <var>4</var> liczby całkowite w przedziale od <var>1</var> do <var>12</var>, które są względnie pierwsze z <var>12</var> (są to <var>1</var>, <var>5</var>, <var>7</var>, i <var>11</var>).</p>
+        <p>Funkcja Eulera jest kluczowym narzędziem w teorii liczb oraz kryptografii, gdzie jest wykorzystywana do zapewnienia bezpieczeństwa komunikacji i szyfrowania danych.</p>
+    </div>
+
+    <section class="contact-box">
+        <iframe src="kontakt.html"></iframe>
+    </section>
+</body>
+</html>

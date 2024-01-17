@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Równania modularne</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Równania modularne</h1>
+    </header>
+
+    <nav class="left-menu">
+        <ul>
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="#top">Teoria</a></li>
+            <li><a href="./rownania-modularne/rownania-modularne-zad-pod.html">Zadania podstawowe</a></li>
+            <li><a href="./rownania-modularne/rownania-modularne-zad-zaa.html">Zadania zaawansowane</a></li>
+        </ul>
+    </nav>
+
+    <div class="middle-menu">
+        <p>
+            <strong>Teoria</strong>
+        </p>
+        <p>Kongruencje to matematyczne równania modularne, które odgrywają kluczową rolę w teorii liczb, kryptografii, naukach komputerowych i wielu innych dziedzinach matematyki oraz informatyki. Rozwiązywanie kongruencji polega na poszukiwaniu wartości nieznanej zmiennej, która spełnia dane równanie modulo określoną liczbę całkowitą.</p>
+        <p>Istnieją różne rodzaje kongruencji, ale jednym z najważniejszych jest <strong>kongruencja liniowa</strong>, która jest opisana następująco:</p>
+        <p>
+            <code>A * x ≡ B (mod m)</code>
+        </p>
+        <p>Gdzie:</p>
+        <ul>
+            <li><var>A</var> to współczynnik przy nieznanej zmiennej <var>x</var>,</li>
+            <li><var>B</var> to stała,</li>
+            <li><var>m</var> to liczba, przez którą wykonujemy operację modulo.</li>
+        </ul>
+        <p>
+            <strong>Wskazówki do rozwiązywania kongruencji</strong>
+        </p>
+        <p>Podczas rozwiązywania kongruencji naszym celem jest znalezienie wszystkich liczb całkowitych <var>x</var>, które spełniają dane równanie. Teoria kongruencji oferuje różne metody rozwiązywania takich równań, które zależą od wartości <var>A</var>, <var>B</var> i <var>m</var>.</p>
+        <ul>
+            <li>Przekształcamy kongruencję do postaci:</li>
+            <p><code>Ax ≡ B (mod m)</code>, gdzie <code>A ≡ a (mod m)</code>, <code>B ≡ b (mod m)</code>, przy założeniu, że <var>0 <= a, b < m</strong>.</p>
+            <li>Obliczamy największy wspólny dzielnik <code>d = NWD(A, m)</code>.</li>
+            <li>Sprawdzamy:</li>
+            <ul>
+                <li>a) Jeśli <var>d</var> nie dzieli <var>B</var>, to kongruencja nie ma rozwiązania.</li>
+                <li>b) Jeśli <var>d</var> dzieli <var>B</var>, to istnieje nieskończenie wiele rozwiązań, które można dalej obliczyć.</li>
+            </ul>
+            <li>Wykonujemy dzielenie przez <var>d</var>:</li>
+            <p><code>(A/d) * x ≡ (B/d) (mod m/d)</code></p>
+            <li>Stąd uzyskujemy rozwiązanie:</li>
+            <p><code>x ≡ (A/d)<sup>-1</sup> * (B/d) (mod m/d)</code></p>
+            <li>Wyznaczamy odwrotność <var>(A/d)<sup>-1</sup></var>:</li>
+            <ul>
+                <li>a) Metodą prób i błędów,</li>
+                <li>b) Korzystając z Rozszerzonego Algorytmu Euklidesa:</li>
+                <p><code>1 = NWD(A/d, m/d) = y * (A/d) + z * (m/d)</code></p>
+                <p><code>1 ≡ y * (A/d) (mod m/d)</code></p>
+                <p><code>(A/d)<sup>-1</sup> ≡ y (mod m/d)</code></p>
+            </ul>
+            <li>Jedno z rozwiązań ma postać:</li>
+            <p><code>x<sub>0</sub> = (A/d)<sup>-1</sup> * (B/d)</code></p>
+            <li>Wszystkie rozwiązania można zapisać jako:</li>
+            <p><code>x = x<sub>0</sub> + k * (m/d)</code>, gdzie <var>k</var> jest liczbą całkowitą</p>
+        </ul>
+    </div>
+
+    <section class="contact-box">
+        <iframe src="kontakt.html"></iframe>
+    </section>
+</body>
+</html>

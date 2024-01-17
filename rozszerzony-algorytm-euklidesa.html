@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rozszerzony algorytm Euklidesa</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Rozszerzony algorytm Euklidesa</h1>
+    </header>
+
+    <nav class="left-menu">
+        <ul>
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="#top">Teoria</a></li>
+            <li><a href="./rozszerzony-algorytm-euklidesa/rozszerzony-algorytm-euklidesa-zad-pod.html">Zadania podstawowe</a></li>
+            <li><a href="./rozszerzony-algorytm-euklidesa/rozszerzony-algorytm-euklidesa-zad-zaa.html">Zadania zaawansowane</a></li>
+        </ul>
+    </nav>
+
+    <div class="middle-menu">
+        <p>
+            <strong>Teoria</strong>
+        </p>
+        <p>
+            Rozszerzony Algorytm Euklidesa (RAE) to efektywny sposób znajdowania największego wspólnego dzielnika (NWD) dwóch liczb całkowitych oraz wyznaczania rozwiązań równań modularnych. Jest to ważne narzędzie w teorii liczb i kryptografii, które pozwala na rozwiązywanie równań modulo m.
+        </p>
+        <p>
+            <strong>Największy Wspólny Dzielnik (NWD)</strong>
+        </p>
+        <p>
+            Największy wspólny dzielnik dwóch liczb całkowitych <var>a</var> i <var>b</var>, oznaczany jako NWD(a, b), to największa liczba całkowita, która dzieli obie liczby <var>a</var> i <var>b</var> bez reszty. Rozszerzony Algorytm Euklidesa pozwala na efektywne obliczanie NWD(a, b).
+        </p>
+        <p>
+            <strong>Działanie Rozszerzonego Algorytmu Euklidesa</strong>
+        </p>
+        <p>
+            Rozszerzony Algorytm Euklidesa działa w następujący sposób:
+        </p>
+        <ol>
+            <li>Rozpoczyna się od standardowego algorytmu Euklidesa, który polega na dzieleniu większej liczby przez mniejszą i powtarzaniu tego procesu, aż osiągniemy resztę równą zeru. Wtedy ostatnia niezerowa reszta jest NWD(a, b).</li>
+            <li>W trakcie wykonywania standardowego algorytmu Euklidesa, RAE prowadzi równolegle obliczenia, które pozwalają na znalezienie współczynników <var>x</var> i <var>y</var>, takich że a * x + b * y = NWD(a, b).</li>
+        </ol>
+        <p>
+            <strong>Przykład</strong>
+        </p>
+        <p>
+            Rozważmy działanie rozszerzonego algorytmu Euklidesa dla <var>n = 1547</var> i <var>m = 560</var>:
+        </p>
+<pre>
+1547 = 2 · 560 + 427
+560 = 1 · 427 + 133
+427 = 3 · 133 + 28
+133 = 4 · 28 + 21
+28 = 1 · 21 + 7
+21 = 3 · 7 + 0
+</pre>
+        <p>
+            <br>Stąd NWD(1547, 560) = <var>7</var>. Aby wyrazić <var>7</var> jako kombinację danych wejściowych, obliczamy:
+        </p>
+<pre>
+7 = <b>28</b> − 1 · <b>21</b> = 28 − 1 · (133 − 4 · 28)
+= −1 · <b>133</b> + 5 · <b>28</b> = −1 · 133 + 5 · (427 − 3 · 133)
+= 5 · <b>427</b> − 16 · <b>133</b> = 5 · 427 − 16 · (560 − 1 · 427)
+= −16 · <b>560</b> + 21 · <b>427</b> = −16 · 560 + 21 · (1547 − 2 · 560)
+= 21 · <b>1547</b> − 58 · <b>560</b>
+</pre>
+        <p>
+            Z wyników obliczeń z pomocą Rozszerzonego Algorytmu Euklidesa wynika, że:
+            <code>7 = <b>21</b> * 1547 <b>-58</b> * 560</code>
+        </p>
+    </div>
+
+    <section class="contact-box">
+        <iframe src="kontakt.html"></iframe>
+    </section>
+</body>
+</html>

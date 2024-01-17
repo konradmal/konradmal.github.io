@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twierdzenie Eulera</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Twierdzenie Eulera</h1>
+    </header>
+
+    <nav class="left-menu">
+        <ul>
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="#top">Teoria</a></li>
+            <li><a href="./twierdzenie-eulera/twierdzenie-eulera-zad-pod.html">Zadania podstawowe</a></li>
+            <li><a href="./twierdzenie-eulera/twierdzenie-eulera-zad-zaa.html">Zadania zaawansowane</a></li>
+        </ul>
+    </nav>
+
+    <div class="middle-menu">
+        <p>
+            <strong>Teoria</strong>
+        </p>
+        <p>
+            Twierdzenie Eulera stanowi ważny fakt w teorii liczb i jest używane w matematyce oraz kryptografii. Mówi ono o zachowaniu liczb całkowitych w zbiorze reszt modulo przy podnoszeniu ich do pewnych potęg.
+        </p>
+        <p>
+            <strong>Sformułowanie Twierdzenia Eulera:</strong>
+        </p>
+        <p>
+            Dla dowolnych liczb całkowitych m i n, gdzie NWD(m, n) = <var>1</var> (czyli <var>m</var> i <var>n</var> są względnie pierwsze), zachodzi następujący związek:
+        </p>
+        <p>
+            <code>n<sup>φ(m)</sup> ≡ 1 (mod m)</code>
+        </p>
+        <p>
+            Oznacza to, że gdy podnosimy liczbę całkowitą <var>n</var> do potęgi równego funkcji Eulera <var>φ(m)</var> i obliczamy resztę z dzielenia przez <var>m</var>, to wynik zawsze będzie równy <var>1</var>.
+        </p>
+        <p>
+            Funkcja Eulera <var>φ(m)</var> oblicza liczbę całkowitych liczb względnie pierwszych z <var>m</var> w przedziale od <var>1</var> do <var>m-1</var>. Jest to kluczowy element w Twierdzeniu Eulera.
+        </p>
+        <p>
+            Twierdzenie Eulera jest niezwykle przydatne w kryptografii, gdzie stosuje się je do tworzenia kluczy kryptograficznych oraz w innych dziedzinach matematyki.
+        </p>
+        <p>
+            <strong>Przykład:</strong>
+        </p>
+        <p>Policzmy <var>11<sup>113</sup> mod 18</var>.</p>
+        <p><var>11 ⊥ 18</var>, czyli można skorzystać z Twierdzenia Eulera.</p>
+        <p><var>φ(18) = φ(2)φ(9) = 1(3<sup>2</sup> − 3) = 6</var></p>
+        <p><var>11<sup>113</sup> = 11<sup>18*6</sup>*11<sup>5</sup> ≡<sub>18</sub> 11<sup>5</sup></var></p>
+        <p>Liczymy wybrane potęgi <var>11</var> modulo <var>18</var>:</p>
+        <p><var>11<sup>1</sup> ≡ <sub>18</sub> 11</var>,</p>
+        <p><var>11<sup>2</sup> = 121 ≡ <sub>18</sub> 13 ≡ <sub>18</sub> −5</var>,</p>
+        <p><var>11<sup>4</sup> ≡<sub>18</sub> (−5)*(−5) = 25 ≡<sub>18</sub> 7</var>.</p><br>
+        <p><var>11<sup>113</sup> ≡<sub>18</sub> 11<sup>5</sup> = 11<sup>4</sup>*11<sup>1</sup> ≡<sub>18</sub> 7*11 = 77 ≡<sub>18</sub> 5</var></p>
+        <p>Wynik obliczenia <var>11<sup>113</sup> mod 18</var> wynosi: <var>5</var></p>
+    </div>
+
+    <section class="contact-box">
+        <iframe src="kontakt.html"></iframe>
+    </section>
+</body>
+</html>

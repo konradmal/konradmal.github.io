@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Małe twierdzenie Fermata</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Małe Twierdzenie Fermata</h1>
+    </header>
+
+    <nav class="left-menu">
+        <ul>
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="#top">Teoria</a></li>
+            <li><a href="./male-twierdzenie-fermata/male-twierdzenie-fermata-zad-pod.html">Zadania podstawowe</a></li>
+            <li><a href="./male-twierdzenie-fermata/male-twierdzenie-fermata-zad-zaa.html">Zadania zaawansowane</a></li>
+        </ul>
+    </nav>
+
+    <div class="middle-menu">
+        <p>
+            <strong>Teoria</strong>
+        </p>
+        <p>
+            Małe Twierdzenie Fermata to ważne twierdzenie w teorii liczb, które mówi o zachowaniu liczb całkowitych w zbiorze reszt modulo przy podnoszeniu ich do pewnych potęg. Twierdzenie to jest nazwane na cześć matematyka Pierre'a de Fermata i jest używane w kryptografii, teorii kodowania oraz innych dziedzinach matematyki.
+        </p>
+        <p>
+            <strong>Sformułowanie Twierdzenia:</strong>
+        </p>
+        <p>
+            Jeśli <var>p</var> jest liczbą pierwszą (tj. nie ma innych dzielników niż 1 i samo siebie), a <var>a</var> jest dowolną liczbą całkowitą, to zachodzi następujący związek:
+        </p>
+        <p>
+            <code>a<sup>p</sup> ≡ a (mod p)</code>
+        </p>
+        <p>
+            Oznacza to, że gdy podnosimy liczbę całkowitą <var>a</var> do potęgi <var>p</var> i obliczamy resztę z dzielenia przez <var>p</var>, to wynik będzie równy <var>a</var> (czyli reszta jest taka sama jak <var>a</var>).
+        </p>
+        <p>
+            Jest to bardzo przydatne twierdzenie w kryptografii, gdzie powszechnie używa się liczb pierwszych do tworzenia kluczy kryptograficznych. Twierdzenie Fermata pozwala sprawdzać, czy liczby są zgodne z tymi kluczami oraz pomaga w tworzeniu bezpiecznych systemów kryptograficznych.
+        </p>
+        <p>
+            <strong>Przykład:</strong>
+        </p>
+        <p>Policzmy <var>7<sup>126</sup> mod 11</var>.</p>
+        <p><var>11</var> jest liczbą pierwszą oraz <var>7</var> jest liczbą pierwszą, co pozwala nam skorzystać z wniosku z Małego Twierdzenia Fermata – <var>7<sup>10</sup> ≡ 11 (mod 1)</var>.</p>
+        <p><var>126 mod 10 = 6,</p>
+            <p>7<sup>126</sup> = (7<sup>10</sup>)<sup>12</sup> · 7<sup>6</sup> ≡ 11 (mod 7<sup>6</sup>)
+        </var>,</p>
+        <ol>
+            <li>Obliczamy wybrane potęgi <var>7</var> modulo <var>11</var>:</li>
+            <ul>
+                <li><var>7<sup>2</sup> = 49 ≡ 11 (mod 5)</var>,</li>
+                <li><var>7<sup>4</sup> ≡ 11 (mod 25) ≡ 11 (mod 3)</var>.</li>
+            </ul>
+            <li><var>7<sup>126</sup> ≡ 11 (mod 7<sup>6</sup>) = 7<sup>4</sup> · 7<sup>2</sup> ≡ 11 (mod 15) ≡ 11 (mod 4)</var>.</li>
+        </ol>
+        <p>Wynik obliczenia <var>7<sup>126</sup> mod 11</var> wynosi: <var>4</var></p>
+    </div>
+
+    <section class="contact-box">
+        <iframe src="kontakt.html"></iframe>
+    </section>
+</body>
+</html>
