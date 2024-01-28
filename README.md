@@ -23,5 +23,5 @@ Includes fundamentals, congruences, linear congruences, modular inverses, Euler'
 Feedback and suggestions for improvements welcomed.
 
 ## Contact
-- Creator: Konrad Malenczak
+- Author: Konrad Malenczak
 - Supervisor: Dr Andrzej Zembrzuski
